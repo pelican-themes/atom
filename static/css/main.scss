@@ -116,6 +116,14 @@ footer {
         display: flex;
         .column{flex:1;}
     }
+
+    a {
+        color: $lightgray;
+        text-decoration: none;
+        &:hover {
+            color: $green;
+        }
+    }
 }
 
 /*

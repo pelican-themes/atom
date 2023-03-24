@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Topics</h1>
+
+    <ul class="cloud" role="list" aria-label="Webdev tag cloud">
+        {% for tag, articles in tags %}
+            <li>
+                <a
+                    href="{{SITEURL}}/{{tag.url}}"
+                    data-weight="{{ articles | length }}">
+                    {{ tag }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

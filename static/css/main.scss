@@ -93,6 +93,7 @@ main::-webkit-scrollbar {
     margin-bottom: 30px;
     height: 100%;
     overflow: hidden;
+    -webkit-text-size-adjust: none;
 
     h1 {
         font-size: 2em;

@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% from 'macros.html' import article_tile with context %}
 
-{% block body_class %}home{% endblock%}
-
 {% block content %}
+<h1>Posts in category: {{ category }}</h1>
 <div class="masonry-grid">
     {% for article in articles %}
     <article class="masonry-grid__item">

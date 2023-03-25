@@ -1,0 +1,58 @@
+{% macro article_tile(color, article) %}
+<h1>
+    <a
+        class="{{ color }}"
+        href="{{ SITEURL }}/{{ article.url }}"
+        title="{{ article.title }}"
+        >
+        {{ article.title }}
+    </a>
+</h1>
+<time class="timestamp gray">
+    {{ article.date|strftime('%d %B %Y') }}
+</time>
+{% if SHOW_TAGS or SHOW_CATEGORIE %}
+<div class="labels">
+    {% if SHOW_CATEGORIE %}
+    <a
+        href="{{ SITEURL }}/{{ article.category.url }}"
+        class="category {{ color }}"
+        title="Category: {{ article.category }}">
+        {{ article.category }}
+    </a>
+    {% endif %}
+    {% if SHOW_TAGS %}
+    {% for tag in article.tags %}
+    <a
+        href="{{ SITEURL }}/{{ tag.url }}"
+        class="tag"
+        title="Tag: {{ tag }}">
+        {{ tag }}
+    </a>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endif %}
+{{ article.summary }}
+<a
+    role="button"
+    class="read_more"
+    href="{{ SITEURL }}/{{ article.url }}"
+    title="Read More">
+    &#10095; Read more
+</a>
+{% endmacro %}
+
+{% macro word_cloud(groups) %}
+<ul class="cloud" role="list" aria-label="Webdev tag cloud">
+    {% for label, articles in groups %}
+        <li>
+            <a
+                href="{{SITEURL}}/{{label.url}}"
+                data-weight="{{ articles | length }}">
+                {{ label }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endmacro %}

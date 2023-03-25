@@ -53,6 +53,7 @@
 
     </head>
     <body class="{% block body_class %}{% endblock%}">
+
         <!-- top navigation -->
         <header>
             <nav class="navigation">
@@ -64,12 +65,11 @@
                 <label class='menu-button-container' for="menu-toggle">
                     <span class='menu-button'></span>
                 </label>
+
                 <ul class="menu">
-                    <li><a href="{{ SITEURL }}">Blog</a></li>
-                    {% for page in pages %}
-                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{page.title}}</a></li>
+                    {% for header, link in MENU_ITEMS %}
+                    <li><a href="{{ link }}" title="{{ header }}">{{ header }}</a></li>
                     {% endfor %}
-                    <li><a href="{{ SITEURL }}/{{ TAGS_URL }}">Topics</a></li>
                 </ul>
             </nav>
         </header>
@@ -92,7 +92,10 @@
 
                     <nav class="social">
                         {% for platform, link in SOCIALS.items() if link %}
-                        <a rel="external" href="{{link}}">
+                        <a
+                            rel="external"
+                            href="{{link}}"
+                            title="My {{ platform }} page">
                             <i class="fa-brands fa-{{platform}}"></i>
                         </a>
                         {% endfor %}
@@ -110,7 +113,11 @@
             <div class="inner">
                 <div class="column align-left mobile-hidden">
                     <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/frankcorneliusmartin/pelican-atom">My Atom theme</a>
+                    <a
+                        href="https://github.com/frankcorneliusmartin/pelican-atom"
+                        title="Source code of this theme">
+                        My Atom theme
+                    </a>
                 </div>
                 <div class="column">
                     <i class="fa-solid fa-copyright"></i> {{ YEAR }} {{ SITENAME }}

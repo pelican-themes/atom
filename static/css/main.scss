@@ -504,6 +504,17 @@ $size: calc(220px/60);
     }
 
     h1 a{color: $purple}
+
+    a{
+        &.gray   { color: $gray }
+        &.yellow { color: $yellow }
+        &.orange { color: $orange }
+        &.green  { color: $green }
+        &.azure  { color: $azure }
+        &.blue   { color: $blue }
+        &.purple { color: $purple }
+    }
+
     h2 a{color: $orange}
 
 
@@ -576,27 +587,29 @@ $size: calc(220px/60);
         align-items: center;
         justify-content: center;
         line-height: 2.5rem;
-    }
-    ul.cloud a {
-        --size: 4;
-        font-size: calc(var(--size) * 0.25rem + 0.5rem);
-        font-size: calc(4rem);
-        display: block;
-        padding: 0.125rem 0.25rem;
-        text-decoration: none;
-        position: relative;
-    }
 
-    ul.cloud a[data-weight="1"] { font-size: 1rem; color: $azure; }
-    ul.cloud a[data-weight="2"] { font-size: 2rem; color: $blue;}
-    ul.cloud a[data-weight="3"] { font-size: 3rem; color: $green;}
-    ul.cloud a[data-weight="4"] { font-size: 4rem; color: $orange;}
-    ul.cloud a[data-weight="5"] { font-size: 5rem; color: $purple;}
-    ul.cloud a[data-weight="6"] { font-size: 6rem; color: $azure;}
-    ul.cloud a[data-weight="7"] { font-size: 7rem; color: $blue;}
-    ul.cloud a[data-weight="8"] { font-size: 8rem; color: $green;}
-    ul.cloud a[data-weight="9"] { font-size: 9rem; color: $orange;}
+        a {
+            font-size: 1rem;
+            display: block;
+            padding: 0.125rem 0.25rem;
+            text-decoration: none;
+            position: relative;
 
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &[data-weight="1"] { font-size: 1rem; color: $azure; }
+            &[data-weight="2"] { font-size: 2rem; color: $blue;}
+            &[data-weight="3"] { font-size: 3rem; color: $green;}
+            &[data-weight="4"] { font-size: 4rem; color: $orange;}
+            &[data-weight="5"] { font-size: 5rem; color: $purple;}
+            &[data-weight="6"] { font-size: 6rem; color: $azure;}
+            &[data-weight="7"] { font-size: 7rem; color: $blue;}
+            &[data-weight="8"] { font-size: 8rem; color: $green;}
+            &[data-weight="9"] { font-size: 9rem; color: $orange;}
+        }
+    }
 
     .toggle {
 
@@ -622,7 +635,8 @@ $size: calc(220px/60);
         }
 
     }
-    .tags{
+
+    .labels{
         margin-top:1em;
         a{
             color: $darkergray;
@@ -638,6 +652,28 @@ $size: calc(220px/60);
                 color: $white;
                 text-decoration: none;
             }
+
+            &.category{
+
+                &.gray   { background-color: $gray; &:hover{ color: $gray}}
+                &.yellow { background-color: $yellow; &:hover{ color: $yellow }}
+                &.orange { background-color: $orange; &:hover{ color: $orange }}
+                &.green  { background-color: $green; &:hover{ color: $green }}
+                &.azure  { background-color: $azure; &:hover{ color: $azure }}
+                &.blue   { background-color: $blue; &:hover{ color: $blue }}
+                &.purple { background-color: $purple; &:hover{ color: $purple }}
+
+                &:hover{
+                    background-color: $darkgray;
+                    color: $blue;
+                    box-shadow: 0 0 2px inset;
+                }
+            }
+        }
+    }
+    .category{
+        a{
+
         }
     }
 

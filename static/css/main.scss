@@ -320,17 +320,25 @@ $size: calc(220px/60);
     // hamburger icon
     .menu-button-container {
         display: none;
-        width: 30px;
+        width: 25px;
         cursor: pointer;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-right: 20px;
+        margin: 5px 5px 0 0;
+        padding: 5px;
+        width:50px;
+        height:50px;
+        border-radius: 50px;
+        background-color: $blue;
+        // border-color: $lightgray;
+        // border-style: solid;
+        // border-width: 1px;
 
         .menu-button {
 
             display: block;
-            background-color: $lightgray;
+            background-color: $darkergray;
             position: absolute;
             height: 3px;
             width: 25px;
@@ -339,7 +347,7 @@ $size: calc(220px/60);
 
             &::before, &::after {
                 display: block;
-                background-color: $lightgray;
+                background-color: $darkergray;
                 position: absolute;
                 height: 3px;
                 width: 25px;
@@ -360,8 +368,9 @@ $size: calc(220px/60);
 
         // hamburger animtation
         &:checked {
+
             + .menu-button-container .menu-button {
-                background: $darkgray;
+                background: $azure;
                 &::before {
                     margin-top: 0px;
                     transform: rotate(405deg);
@@ -666,11 +675,11 @@ $size: calc(220px/60);
             }
         }
     }
-    .category{
-        a{
+    // .category{
+    //     a{
 
-        }
-    }
+    //     }
+    // }
 
     .cv-item li {
         // organization header
@@ -678,8 +687,9 @@ $size: calc(220px/60);
             font-weight: bold;
             font-size: 1.2em;
 
-            a{color: $azure;}
-
+            a{
+                color: $azure;
+            }
         }
 
         list-style: none;
@@ -710,55 +720,57 @@ $size: calc(220px/60);
     }
     .navigation .menu-button-container {
         display:flex;
+        z-index: 102;
     }
     .navigation  ul.menu {
         position: absolute;
         top: 0;
-        margin-top: 50px;
+        margin-top: 0px;
         left: 0;
         width: 100%;
-        align-items: center;
-        display:flex;
-        flex-wrap: wrap;
-        margin-top: 39px;
+        padding-top: 39px;
         padding-left:0;
-        background-color: #282c34;
+        background-color: $blue;
+        z-index: 101;
     }
     #menu-toggle ~ .menu{
         padding:0;
+        padding-top:100px;
+        height:0;
+        opacity: 0;
+        display: block;
+        transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     #menu-toggle:checked ~ .menu{
         padding-bottom:20px;
-        padding-top:20px;
+        padding-top:120px;
+        height: calc(100vh - 70px);
+        opacity: 1;
+        transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     #menu-toggle ~ .menu li {
-        height: 0;
-        margin: 0;
-        border: 0;
-        padding:0;
-        width: 40%;
-        padding: 0 5%;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    #menu-toggle:checked ~ .menu li {
-        height: 2.5em;
-        padding: 0.5em 5%;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        width: 100vw;
+        padding: 0;
     }
     .menu > li {
-        display: flex;
         justify-content: center;
         margin: 0;
-        padding: 0.5em 0;
-        width: 100%;
+        padding: 0;
+        width: calc(100% - 10%);
     }
     .navigation ul.menu li a {
-        width:90%;
-        height:1.7em;
-        border: 1px #abb2bf solid;
+        border: 0;
+        height:auto;
         text-align: center;
         padding-top:.8em;
+        color: $darkergray;
+        font-size: 1.6em;
+
+        &:hover{
+            background-color: initial;
+            color: $white;
+            text-decoration: none;
+        }
     }
 }
 

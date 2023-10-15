@@ -514,10 +514,6 @@ $size: calc(220px/60);
         &.purple { color: $purple }
     }
 
-    h2 a{color: $orange}
-
-
-
     ul.auto-toc{
 
         padding-left:30px;
@@ -674,6 +670,34 @@ $size: calc(220px/60);
         a{
 
         }
+    }
+
+    .cv-item li {
+        // organization header
+        p{
+            font-weight: bold;
+            font-size: 1.2em;
+
+            a{color: $azure;}
+
+        }
+
+        list-style: none;
+
+        blockquote {
+            margin:0;
+        }
+    }
+
+    .cv-table{
+
+        .field-name {
+            color: $gray;
+            font-weight: normal;
+            text-align: left;
+            padding-right: 20px;
+        }
+        .field-body {color: $lightgray;}
     }
 
 }

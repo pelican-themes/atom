@@ -235,9 +235,7 @@ footer {
 $size: calc(220px/60);
 .picture{
     font-size: $size;
-    // line-height:4px;
-    // font-size: 1vw;
-    line-height: $size;
+    letter-spacing: -.25px;
     line-height: 2px;
     margin:0;
 

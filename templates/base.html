@@ -20,11 +20,13 @@
         {% endblock %}
 
         {% block meta_twitter %}
+        {% if TWITTER %}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@{{ TWITTER['handle'] }}" />
         <meta name="twitter:title" content="{{ SITENAME }}" />
         <meta name="twitter:description" content="TODO, insert article" />
         <meta name="twitter:image" content="https://i0.wp.com/tim.blog/wp-content/uploads/2019/03/clive_blog_post_image.jpg?resize=768%2C512&ssl=1" />
+        {% endif %}
         {% endblock %}
 
         <!-- styles -->
@@ -46,10 +48,10 @@
 
         <!-- fav icons -->
         <!-- https://favicon.io/favicon-converter/ -->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/theme/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/theme/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/theme/images/favicon-16x16.png">
-        <link rel="manifest" href="{{ SITEURL }}/theme/images/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/favicon/favicon-16x16.png">
+        <link rel="manifest" href="{{ SITEURL }}/favicon/site.webmanifest">
 
     </head>
     <body class="{% block body_class %}{% endblock%}">
@@ -58,7 +60,13 @@
         <header>
             <nav class="navigation">
                 {% block menu_icon%}
-                <i class="fa-solid fa-compass"></i>
+                <i class="fa-solid">
+                    <img src="{{ SITEURL }}/favicon/favicon-32x32.png"
+                         alt="menu icon"
+                         class="menu-icon"
+                         width="16"
+                         height="16">
+                </i>
                 {% endblock%}
                 <!-- hamburger menu -->
                 <input id="menu-toggle" type="checkbox" />

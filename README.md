@@ -3,13 +3,26 @@
 A responsive theme inspired by the VSCode and Atom.
 ![Render of the Atom theme](showcase.png)
 
+
+## TODOs
+
+- [ ] Update link/text to Atom theme in the bottom
+- [ ] Option to include image instead of ASCII art
+- [ ] Move ASCII art picture out of the config file
+- [ ] Support pagination
+- [ ] Support FEEDS
+- [ ] Disqus support
+- [ ] Add `archives`, `author`, `authors` and `period_archives` templates
+- [ ] Clean up Javascript code
+- [ ] Support for translations
+- [ ] Finish social media meta `X` and `open_graph`
+
 ## Installation
 
 
 ## Settings
 
 ```python
-
 AUTHOR = 'Author'
 SITENAME = 'Atom'
 SITEURL = 'http://localhost:8000/'
@@ -71,5 +84,3 @@ TODO:
 - cv items
 - rows of images
 - code blocks
-
-## ...

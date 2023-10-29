@@ -11,7 +11,7 @@ A responsive theme inspired by the VSCode and Atom.
 - [ ] Move ASCII art picture out of the config file
 - [ ] Support pagination
 - [ ] Support FEEDS
-- [ ] Disqus support
+- [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
 - [ ] Add `archives`, `author`, `authors` and `period_archives` templates
 - [ ] Clean up Javascript code
 - [ ] Support for translations

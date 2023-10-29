@@ -1,7 +1,7 @@
 ## Pelican Atom Theme
 
 A responsive theme inspired by the VSCode and Atom.
-![Render of the Atom theme](showcase.png)
+![Render of the Atom theme](showcase2.png)
 
 
 ## TODOs

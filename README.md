@@ -6,8 +6,9 @@ A responsive theme inspired by the VSCode and Atom.
 
 ## TODOs
 
-- [ ] Update link/text to Atom theme in the bottom
+- [x] Update link/text to Atom theme in the bottom
 - [ ] Option to include image instead of ASCII art
+- [ ] Option to use fa-icon for logo in the header
 - [ ] Move ASCII art picture out of the config file
 - [ ] Support pagination
 - [ ] Support FEEDS
@@ -63,6 +64,10 @@ SHOW_TAGS = True
 # index pages (e.g home and the tags page) and shown above each post on
 # the post page.
 SHOW_CATEGORIE = True
+
+# Setting this to true wil display the site name in the header next to
+# the logo
+DISLAY_SITE_NAME_IN_HEADER = True
 
 
 MENU_ITEMS = (

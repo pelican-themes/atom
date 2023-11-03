@@ -68,12 +68,18 @@
                          height="16">
                 </i>
                 {% endblock%}
+
+                {% if DISLAY_SITE_NAME_IN_HEADER %}
+                <span class="site-name">
+                    {{ SITENAME }}
+                </span>
+                {% endif %}
+
                 <!-- hamburger menu -->
                 <input id="menu-toggle" type="checkbox" />
                 <label class='menu-button-container' for="menu-toggle">
                     <span class='menu-button'></span>
                 </label>
-
                 <ul class="menu">
                     {% for header, link in MENU_ITEMS %}
                     <li><a href="{{ link }}" title="{{ header }}">{{ header }}</a></li>

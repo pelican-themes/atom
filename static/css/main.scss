@@ -544,6 +544,13 @@ $size: calc(220px/60);
         }
     }
 
+    .call-out{
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background-color: $darkergray;
+    }
+
     hr{
         color: $gray;
         border-style: solid;

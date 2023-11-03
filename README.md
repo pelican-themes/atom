@@ -10,7 +10,7 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Move ASCII art picture out of the config file
 - [x] Option to include image instead of ASCII art
 - [x] Clean up JavaScript code
-- [ ] Remove the need for jQuery
+- [x] Remove the need for jQuery
 - [ ] Option to use fa-icon for logo in the header
 - [ ] Support pagination
 - [ ] Support FEEDS

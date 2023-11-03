@@ -18,20 +18,20 @@ function build_minimap() {
     });
 }
 
-$( document ).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
     // build minimap
     build_minimap();
 
     // toggle content, for the menu
-    $(".toggle > *").hide();
-    $(".toggle .header").show();
-    $(".toggle .header").click(function() {
-        if ($(this).hasClass("open")) {
-            $(this).parent().children().not(".header").slideUp();
+    document.querySelector(".toggle > *").hide();
+    document.querySelector(".toggle .header").show();
+    document.querySelector(".toggle .header").click(function() {
+        if (document.querySelector(this).hasClass("open")) {
+            document.querySelector(this).parent().children().not(".header").slideUp();
         } else {
-            $(this).parent().children().not(".header").slideDown();
+            document.querySelector(this).parent().children().not(".header").slideDown();
         }
-        $(this).parent().children(".header").toggleClass("open");
+        document.querySelector(this).parent().children(".header").toggleClass("open");
     })
 });

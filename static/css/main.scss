@@ -296,6 +296,7 @@ $size: calc(220px/60);
     .site-name {
         padding-top: 4px;
         margin-left: 10px;
+        color: $yellow;
     }
 
     ul {
@@ -616,14 +617,14 @@ $size: calc(220px/60);
             }
 
             &[data-weight="1"] { font-size: 1rem; color: $azure; }
-            &[data-weight="2"] { font-size: 2rem; color: $blue;}
-            &[data-weight="3"] { font-size: 3rem; color: $green;}
-            &[data-weight="4"] { font-size: 4rem; color: $orange;}
-            &[data-weight="5"] { font-size: 5rem; color: $purple;}
-            &[data-weight="6"] { font-size: 6rem; color: $azure;}
-            &[data-weight="7"] { font-size: 7rem; color: $blue;}
-            &[data-weight="8"] { font-size: 8rem; color: $green;}
-            &[data-weight="9"] { font-size: 9rem; color: $orange;}
+            &[data-weight="2"] { font-size: 1.4rem; color: $blue;}
+            &[data-weight="3"] { font-size: 1.8rem; color: $green;}
+            &[data-weight="4"] { font-size: 2.2rem; color: $orange;}
+            &[data-weight="5"] { font-size: 2.6rem; color: $purple;}
+            &[data-weight="6"] { font-size: 3rem; color: $azure;}
+            &[data-weight="7"] { font-size: 3.4rem; color: $blue;}
+            &[data-weight="8"] { font-size: 3.8rem; color: $green;}
+            &[data-weight="9"] { font-size: 4.2rem; color: $orange;}
         }
     }
 

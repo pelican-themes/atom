@@ -46,13 +46,13 @@
 {% macro word_cloud(groups) %}
 <ul class="cloud" role="list" aria-label="Webdev tag cloud">
     {% for label, articles in groups %}
-        <li>
-            <a
-                href="{{SITEURL}}/{{label.url}}"
-                data-weight="{{ articles | length }}">
-                {{ label }}
-            </a>
-        </li>
+    <li>
+        <a
+            href="{{SITEURL}}/{{label.url}}"
+            data-weight="{{ articles | length }}">
+            {{ label }}
+        </a>
+    </li>
     {% endfor %}
 </ul>
 {% endmacro %}

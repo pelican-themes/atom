@@ -1,4 +1,14 @@
 {% macro article_tile(color, article) %}
+{% if SHOW_COVERS %}
+{% if article.cover %}
+<img
+    class="cover {{ COVER_FILTER }}"
+    src="{{ article.cover }}"
+    alt="{{ article.title }}">
+{% else %}
+<img class="cover" src="{{ SITEURL }}/theme/images/not-found.png" alt="{{ article.title }}">
+{% endif %}
+{% endif %}
 <h1>
     <a
         class="{{ color }}"
@@ -42,6 +52,7 @@
     &#10095; Read more
 </a>
 {% endmacro %}
+
 
 {% macro word_cloud(groups) %}
 <ul class="cloud" role="list" aria-label="Webdev tag cloud">

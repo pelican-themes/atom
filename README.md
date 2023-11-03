@@ -74,11 +74,24 @@ DISLAY_SITE_NAME_IN_HEADER = True
 
 # In case you have a ASCII are image you want to use. To generate one
 # see https://franky.codes/ascii-picture.html. As alternative it is
-# possible to provide a regular image
+# possible to provide a regular image. Make sure the dimensions of the
+# ASCII picture are 220x220.
 with open('content/extra/me.txt', 'r') as f:
     ASCII_PICTURE = f.read()
 
+# In case you want a regular picture
 PICTURE = 'images/me.jpg'
+
+# Show cover pictures in the blog index. This requires the use of the
+# `cover`` metadata in the post.
+SHOW_COVERS = True
+
+# Convert the cover images to grayscale. Options are:
+# - 'grayscale'
+# - 'grayscale-50'
+# - 'grayscale-75'
+# - 'opacity'
+COVER_FILTER = 'opacity'
 
 
 MENU_ITEMS = (

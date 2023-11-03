@@ -766,6 +766,10 @@ $size: calc(220px/60);
     #menu-toggle ~ .menu li {
         width: 100vw;
         padding: 0;
+        display: none;
+    }
+    #menu-toggle:checked ~ .menu li {
+        display:block;
     }
     .menu > li {
         justify-content: center;

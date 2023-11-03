@@ -12,6 +12,7 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Clean up JavaScript code
 - [x] Remove the need for jQuery
 - [ ] Option to use fa-icon for logo in the header
+- [ ] Support blog images
 - [ ] Support pagination
 - [ ] Support FEEDS
 - [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)

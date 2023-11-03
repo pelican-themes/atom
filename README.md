@@ -7,16 +7,17 @@ A responsive theme inspired by the VSCode and Atom.
 ## TODOs
 
 - [x] Update link/text to Atom theme in the bottom
-- [ ] Option to include image instead of ASCII art
+- [x] Move ASCII art picture out of the config file
+- [x] Option to include image instead of ASCII art
 - [ ] Option to use fa-icon for logo in the header
-- [ ] Move ASCII art picture out of the config file
 - [ ] Support pagination
 - [ ] Support FEEDS
 - [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
 - [ ] Add `archives`, `author`, `authors` and `period_archives` templates
-- [ ] Clean up Javascript code
+- [ ] Clean up JavaScript code
 - [ ] Support for translations
 - [ ] Finish social media meta `X` and `open_graph`
+- [ ] Support for YouTube videos
 
 ## Installation
 
@@ -68,6 +69,14 @@ SHOW_CATEGORIE = True
 # Setting this to true wil display the site name in the header next to
 # the logo
 DISLAY_SITE_NAME_IN_HEADER = True
+
+# In case you have a ASCII are image you want to use. To generate one
+# see https://franky.codes/ascii-picture.html. As alternative it is
+# possible to provide a regular image
+with open('content/extra/me.txt', 'r') as f:
+    ASCII_PICTURE = f.read()
+
+PICTURE = 'images/me.jpg'
 
 
 MENU_ITEMS = (

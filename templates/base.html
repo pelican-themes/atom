@@ -95,13 +95,20 @@
             <div class="wrapper">
                 {% block sitebar %}
                 <article class="identity">
+                    {% if ASCII_PICTURE %}
                     <pre class="picture gray">
                     <!-- maybe we could add some 'build' animation in here -->
                     <!-- e.g. there are multiple charaters with the same
                         intensity, or you can make a typewriter effect -->
-                {{ ASCII_PICTURE }}
+{{ ASCII_PICTURE }}
                     </pre>
-                    <h1 class="orange">{{ AUTHOR }}</h1>
+                    {% elif PICTURE %}
+                    <img
+                        src="{{ SITEURL }}/{{ PICTURE }}"
+                        alt="picture of {{ AUTHOR }}"
+                        class="profile-picture">
+                    {% endif %}
+                    <h1>{{ AUTHOR }}</h1>
                     <p>{{ HEADLINE }}</p>
 
                     <nav class="social">

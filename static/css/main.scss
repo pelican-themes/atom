@@ -95,6 +95,13 @@ main::-webkit-scrollbar {
     overflow: hidden;
     -webkit-text-size-adjust: none;
 
+    img {
+        width: 220px;
+        height: 220px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
     h1 {
         font-size: 2em;
         color: $azure;

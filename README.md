@@ -9,12 +9,13 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Update link/text to Atom theme in the bottom
 - [x] Move ASCII art picture out of the config file
 - [x] Option to include image instead of ASCII art
+- [x] Clean up JavaScript code
+- [ ] Remove the need for jQuery
 - [ ] Option to use fa-icon for logo in the header
 - [ ] Support pagination
 - [ ] Support FEEDS
 - [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
 - [ ] Add `archives`, `author`, `authors` and `period_archives` templates
-- [ ] Clean up JavaScript code
 - [ ] Support for translations
 - [ ] Finish social media meta `X` and `open_graph`
 - [ ] Support for YouTube videos

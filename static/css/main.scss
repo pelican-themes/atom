@@ -111,7 +111,7 @@ main::-webkit-scrollbar {
 .content{
     flex: 1 1 250px;
     min-width: 200px;
-    padding-bottom: calc(#{$footerheight} * 2);
+    margin-bottom: calc(#{$footerheight} * 2);
 }
 
 footer {
@@ -282,10 +282,10 @@ $size: calc(220px/60);
 */
 .navigation{
     display: flex;
-    width: 99%;
+    width: 98%;
     height: 24px;
     border-bottom: 1px $lightgray solid;
-    padding: 6px 1% 8px 0;
+    padding: 6px 1% 8px 1%;
 
     i {
         color: $lightgray;
@@ -341,9 +341,6 @@ $size: calc(220px/60);
         height:50px;
         border-radius: 50px;
         background-color: $blue;
-        // border-color: $lightgray;
-        // border-style: solid;
-        // border-width: 1px;
 
         .menu-button {
 
@@ -556,9 +553,7 @@ $size: calc(220px/60);
     .align-center {
         margin-left: auto;
         margin-right: auto;
-
         max-width: fit-content;
-        // display: block;
     }
 
     .figure{
@@ -685,11 +680,6 @@ $size: calc(220px/60);
             }
         }
     }
-    // .category{
-    //     a{
-
-    //     }
-    // }
 
     .cv-item {
         ol {
@@ -734,10 +724,18 @@ $size: calc(220px/60);
     .navigation{
         justify-content: space-between;
         flex-direction: row;
+
+        // center the sitename
+        i {
+            width: 60px;
+        }
+        .site-name {
+            margin-left:0;
+        }
     }
     .navigation .menu-button-container {
         display:flex;
-        z-index: 102;
+        z-index: 102; // in front of map
     }
     .navigation  ul.menu {
         position: absolute;
@@ -748,6 +746,7 @@ $size: calc(220px/60);
         padding-top: 39px;
         padding-left:0;
         background-color: $blue;
+        z-index: 101; // in front of map but behind menu button
     }
     #menu-toggle ~ .menu{
         padding:0;
@@ -756,10 +755,8 @@ $size: calc(220px/60);
         opacity: 0;
         display: block;
         transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        z-index: -1000;
     }
     #menu-toggle:checked ~ .menu{
-        z-index: 101;
         padding-bottom:20px;
         padding-top:120px;
         height: calc(100vh - 70px);

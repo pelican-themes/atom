@@ -23,9 +23,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // build minimap
     build_minimap();
 
-    // toggle content, for the menu
-    document.querySelector(".toggle > *").hide();
-    document.querySelector(".toggle .header").show();
     document.querySelector(".toggle .header").click(function() {
         if (document.querySelector(this).hasClass("open")) {
             document.querySelector(this).parent().children().not(".header").slideUp();

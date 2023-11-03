@@ -9,6 +9,7 @@ function build_minimap() {
             'h3,h4': 'rgba(198, 120, 221,.2)',
             'p': 'rgba(255,255,255,0.08)',
             'div.highlight': 'rgba(255,255,255,0.08)',
+            'img': 'rgba(255,255,255,0.2)',
             // 'table': 'rgba(198, 120, 221 ,0.1)',
         },
         back: 'rgba(0,0,0,0.02)',

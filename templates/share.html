@@ -1,0 +1,53 @@
+<p id="post-share-links" class="social call-out">
+
+    {% set share = SHARE_OPTIONS|default(true) %}
+
+    {% if share == true or 'email' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['email']}}" title="Share via Email">
+        <i class="fa fa-envelope"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'diaspora' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['diaspora']}}" title="Share on Diaspora">
+        <i class="fa-brands fa-diaspora"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'facebook' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['facebook']}}" title="Share on Facebook">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'hacker-news' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News">
+        <i class="fa-brands fa-hacker-news"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'linkedin' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['linkedin']}}" title="Share on LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'mastodon' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['mastodon']}}" title="Share on Mastodon">
+        <i class="fa-brands fa-mastodon"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'reddit' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['reddit']}}" title="Share via Reddit">
+        <i class="fa-brands fa-reddit"></i>
+    </a>
+    {% endif %}
+
+    {% if share == true or 'twitter' in SHARE_OPTIONS %}
+    <a href="{{article.share_post['twitter']}}" title="Share on Twitter">
+        <i class="fa-brands fa-twitter"></i>
+    </a>
+    {% endif %}
+
+</p>

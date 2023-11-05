@@ -306,6 +306,27 @@ $size: calc(220px/60);
 
 }
 
+/* share buttons */
+#post-share-links{
+
+    color: $azure;
+    border: 0;
+    text-align: center;
+
+
+    margin-top: 50px;
+
+    a {
+        border: 0;
+        color: $azure;
+
+        &:hover{
+            background-color: $azure;
+            color: $darkgray;
+        }
+    }
+}
+
 /*
 * MAIN NAVIGATION
 */

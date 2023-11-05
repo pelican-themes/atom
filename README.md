@@ -14,7 +14,7 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Finish social media meta `X` and `open_graph`
 - [x] Support blog images
 - [x] Support pagination
-- [ ] Share options bellow post
+- [x] Share options bellow post
 - [ ] Option to use fa-icon for logo in the header
 - [ ] Support FEEDS
 - [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
@@ -23,6 +23,9 @@ A responsive theme inspired by the VSCode and Atom.
 
 ## Installation
 
+- plugins:
+  - pelican-share-post
+  - ...
 
 ## Settings
 

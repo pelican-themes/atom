@@ -30,4 +30,8 @@
 <article>
     {{ article.content }}
 </article>
+
+{% if article.share_post and article.status != 'draft' %}
+{% include "share.html" %}
+{% endif %}
 {% endblock %}

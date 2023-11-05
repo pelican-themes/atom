@@ -1,4 +1,33 @@
 {% extends 'multicol.html' %}
+
+{% set article_url = SITEURL + '/' + article.url %}
+
+{% if article.cover %}
+{% set article_cover = article.cover %}
+{% else %}
+{% set article_cover = SITEURL + '/theme/images/not-found.png' %}
+{% endif %}
+
+
+{% block open_graph %}
+{{ article.metadata.keys() }}
+<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ article_url }}" />
+<meta property="og:image" content="{{ article_cover }}" />
+<!-- summary is rendered HTML :( -->
+<!-- <meta property="og:description" content="{{ article.summary }}" /> -->
+{% endblock %}
+{% block meta_twitter %}
+{% if TWITTER %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@{{ TWITTER['handle'] }}" />
+<meta name="twitter:title" content="{{ SITENAME }}" />
+<!-- <meta name="twitter:description" content="{{ article.summary }}" /> -->
+<meta name="twitter:image" content="{{ article_cover }}" />
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <article>
     {{ article.content }}

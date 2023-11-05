@@ -4,11 +4,16 @@
 {% block content %}
 <h1>Posts on topic: {{ tag }}</h1>
 <div class="masonry-grid">
-    {% for article in articles %}
+    {% for article in articles_page.object_list %}
     <article class="masonry-grid__item">
         {% set color = loop.cycle('purple', 'blue', 'green', 'orange') %}
         {{ article_tile(color, article) }}
     </article>
     {% endfor %}
 </div>
+
+{% if articles_page.has_other_pages() %}
+{% include 'pagination.html' %}
+{% endif %}
+
 {% endblock %}

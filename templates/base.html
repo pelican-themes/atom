@@ -3,7 +3,7 @@
         - dynamic open graph and twitter metadata, based on articles and pages
 -->
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
     <head>
         {% block title %}
         <title>{{ SITENAME }}</title>
@@ -12,11 +12,18 @@
         <meta name="description" content={{ DESCRIPTION }}>
 
         <!-- open graph metadata for facebook/twitter -->
+        {% if PICTURE %}
+        {% set cover = SITEURL + '/' + PICTURE %}
+        {% else %}
+        {% set cover = SITEURL + '/theme/images/not-found.png' %}
+        {% endif %}
+
         {% block open_graph %}
         <meta property="og:title" content="{{ SITENAME }}" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.frankmartin.nl" />
-        <meta property="og:image" content="https://i0.wp.com/tim.blog/wp-content/uploads/2019/03/clive_blog_post_image.jpg?resize=768%2C512&ssl=1" />
+        <meta property="og:url" content="{{ SITEURL }}" />
+        <meta property="og:description" content="{{ DESCRIPTION }}" />
+        <meta property="og:image" content="{{ cover }}" />
         {% endblock %}
 
         {% block meta_twitter %}
@@ -24,8 +31,8 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@{{ TWITTER['handle'] }}" />
         <meta name="twitter:title" content="{{ SITENAME }}" />
-        <meta name="twitter:description" content="TODO, insert article" />
-        <meta name="twitter:image" content="https://i0.wp.com/tim.blog/wp-content/uploads/2019/03/clive_blog_post_image.jpg?resize=768%2C512&ssl=1" />
+        <meta name="twitter:description" content="{{ DESCRIPTION }}" />
+        <meta name="twitter:image" content="{{ cover }}" />
         {% endif %}
         {% endblock %}
 

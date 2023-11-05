@@ -11,14 +11,15 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Option to include image instead of ASCII art
 - [x] Clean up JavaScript code
 - [x] Remove the need for jQuery
-- [ ] Option to use fa-icon for logo in the header
+- [x] Finish social media meta `X` and `open_graph`
 - [x] Support blog images
-- [ ] Support pagination
+- [x] Support pagination
+- [ ] Share options bellow post
+- [ ] Option to use fa-icon for logo in the header
 - [ ] Support FEEDS
 - [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
 - [ ] Add `archives`, `author`, `authors` and `period_archives` templates
 - [ ] Support for translations
-- [ ] Finish social media meta `X` and `open_graph`
 
 ## Installation
 

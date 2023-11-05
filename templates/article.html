@@ -10,20 +10,18 @@
 
 
 {% block open_graph %}
-{{ article.metadata.keys() }}
-<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:title" content="{{ article.title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ article_url }}" />
 <meta property="og:image" content="{{ article_cover }}" />
-<!-- summary is rendered HTML :( -->
-<!-- <meta property="og:description" content="{{ article.summary }}" /> -->
+<meta property="og:description" content="{{ article.summary | striptags }}" />
 {% endblock %}
 {% block meta_twitter %}
 {% if TWITTER %}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@{{ TWITTER['handle'] }}" />
-<meta name="twitter:title" content="{{ SITENAME }}" />
-<!-- <meta name="twitter:description" content="{{ article.summary }}" /> -->
+<meta name="twitter:title" content="{{ article.title }}" />
+<meta name="twitter:description" content="{{ article.summary | striptags }} " />
 <meta name="twitter:image" content="{{ article_cover }}" />
 {% endif %}
 {% endblock %}

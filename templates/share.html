@@ -1,6 +1,9 @@
+{% set share = SHARE_OPTIONS|default(true) %}
 <p id="post-share-links" class="social call-out">
 
-    {% set share = SHARE_OPTIONS|default(true) %}
+    {% if share %}
+    <span class="share-label">Share this post</span>
+    {% endif %}
 
     {% if share == true or 'email' in SHARE_OPTIONS %}
     <a href="{{article.share_post['email']}}" title="Share via Email">

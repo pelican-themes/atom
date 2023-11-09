@@ -309,14 +309,20 @@ $size: calc(220px/60);
 /* share buttons */
 #post-share-links{
 
-    color: $azure;
     border: 0;
     text-align: center;
 
 
     margin-top: 50px;
 
+    .share-label{
+        color: $gray;
+        margin-right: 20px;
+        font-weight: lighter;
+    }
+
     a {
+        color: $azure;
         border: 0;
         color: $azure;
 

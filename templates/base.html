@@ -60,6 +60,17 @@
         <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/favicon/favicon-16x16.png">
         <link rel="manifest" href="{{ SITEURL }}/favicon/site.webmanifest">
 
+        {% if FEED_ALL_ATOM %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% endif %}
+
     </head>
     <body class="{% block body_class %}{% endblock%}">
 
@@ -104,6 +115,28 @@
                     <li><a href="{{ link }}" title="{{ header }}">{{ header }}</a></li>
                     {% endfor %}
                 </ul>
+                {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
+                <ul class="feeds tablet-hidden">
+                    {% if FEED_ALL_ATOM %}
+                    <li>
+                        <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+                           type="application/atom+xml"
+                           title="{{ SITENAME }} Atom Feed">
+                            <i class="fa-solid fa-atom"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if FEED_ALL_RSS %}
+                    <li>
+                        <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+                           type="application/rss+xml"
+                           title="{{ SITENAME }} RSS Feed">
+                            <i class="fa-solid fa-rss"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                {% endif %}
             </nav>
         </header>
 

@@ -385,6 +385,34 @@ $size: calc(220px/60);
         }
     }
 
+    ul.feeds {
+
+        margin-left: auto;
+        font-size: 0.8em;
+        padding-top: 3px;
+
+        > li {
+            padding: 0;
+            margin-right: 5px;
+
+            a {
+                padding:0px;
+                i {
+                    margin: 4px;
+                    color: $lightgray;
+                }
+
+                &:hover i {
+                    color: $darkgray;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
     // hamburger icon
     .menu-button-container {
         display: none;
@@ -891,6 +919,10 @@ $size: calc(220px/60);
             color: $white;
             text-decoration: none;
         }
+    }
+
+    .navigation ul.feeds {
+        display: none;
     }
 }
 

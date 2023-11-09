@@ -15,7 +15,8 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Support blog images
 - [x] Support pagination
 - [x] Share options bellow post
-- [ ] Option to use fa-icon for logo in the header
+- [x] Option to use fa-icon for logo in the header
+- [x] Add option to use a regular image for the logo in the header
 - [ ] Support FEEDS
 - [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
 - [ ] Add `archives`, `author`, `authors` and `period_archives` templates
@@ -96,6 +97,13 @@ SHOW_COVERS = True
 # - 'opacity'
 COVER_FILTER = 'opacity'
 
+# By default the 32x32 favicon is used. In case you want to use a
+# different one, provide the path to a (square) image.
+# MENU_ICON = 'images/me.jpg'
+
+# In case you want a font-awesome icon to be displayed next to the menu
+# item, provide the name of the icon here.
+# FA_MENU_ICON = 'home'
 
 MENU_ITEMS = (
     ('Blog', SITEURL),

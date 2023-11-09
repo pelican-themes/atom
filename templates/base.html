@@ -67,6 +67,17 @@
         <header>
             <nav class="navigation">
                 {% block menu_icon%}
+                {% if FA_MENU_ICON %}
+                <i class="fa-solid fa-{{ FA_MENU_ICON }}"></i>
+                {% elif MENU_ICON %}
+                <i class="fa-solid">
+                    <img src="{{ SITEURL }}/{{ MENU_ICON }}"
+                         alt="menu icon"
+                         class="menu-icon"
+                         width="16"
+                         height="16">
+                </i>
+                {% else %}
                 <i class="fa-solid">
                     <img src="{{ SITEURL }}/favicon/favicon-32x32.png"
                          alt="menu icon"
@@ -74,6 +85,7 @@
                          width="16"
                          height="16">
                 </i>
+                {% endif %}
                 {% endblock%}
 
                 {% if DISLAY_SITE_NAME_IN_HEADER %}

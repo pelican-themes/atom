@@ -30,6 +30,14 @@ $footerheight: 1em;
 h1 {
     color: $azure;
     font-size: 3em;
+
+    span {
+        color: $darkgray;
+        background-color: $azure;
+        border-radius: $borderradius;
+        padding:0 12px;
+    }
+
 }
 h2 {
     color: $green;
@@ -397,6 +405,7 @@ $size: calc(220px/60);
 
             a {
                 padding:0px;
+                transition: all .15s ease-in-out;
                 i {
                     margin: 4px;
                     color: $lightgray;
@@ -844,6 +853,37 @@ $size: calc(220px/60);
             padding-right: 20px;
         }
         .field-body {color: $lightgray;}
+    }
+
+    .feeds {
+        // flex-direction: row;
+        margin-top:-1.8em;
+        gap: 0;
+        div {
+            display: flex;
+            padding: 5px 0;
+            border-radius: $borderradius;
+        }
+        a {
+            // padding: 5px;
+            background-color: $darkergray;
+            text-align: center;
+            border-radius: $borderradius 0 0 $borderradius;
+            display: inline-block;
+            padding:5px 8px;
+            transition: all .15s ease-in-out;
+            i {
+                font-size:0.9em;
+            }
+            &:hover{
+                color: $darkgray;
+                text-decoration: none;
+                background-color: $green;
+            }
+            &:last-child{
+                border-radius: 0 $borderradius $borderradius 0;
+            }
+        }
     }
 
 }

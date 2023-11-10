@@ -114,6 +114,11 @@ MENU_ITEMS = (
 
 # Code blocks line numbering
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
+
+# Feed generation
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_RSS = 'feeds/all.rss.xml'
+
 ```
 
 ## Generate Articles

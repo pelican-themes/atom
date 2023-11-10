@@ -2,7 +2,38 @@
 {% from 'macros.html' import article_tile with context %}
 
 {% block content %}
-<h1>Posts on topic: {{ tag }}</h1>
+<h1>Topic <span>{{ tag }}<span></h1>
+
+{% if TAG_FEED_ATOM or TAG_FEED_RSS %}
+<div class="feeds">
+    <div>
+{% endif %}
+
+        {% if TAG_FEED_ATOM %}
+        {% set feed_url = TAG_FEED_ATOM_URL if TAG_FEED_ATOM_URL else TAG_FEED_ATOM %}
+        <a
+            href="{{ FEED_DOMAIN }}/{{ feed_url.format(slug=tag) }}"
+            type="application/atom+xml" rel="alternate"
+            title="{{ SITENAME }} {{ tag }} Atom Feed">
+            <i class="fa-solid fa-atom"></i>
+        </a>
+        {% endif %}
+
+        {% if TAG_FEED_RSS %}
+        {% set feed_url = TAG_FEED_RSS_URL if TAG_FEED_RSS_URL else TAG_FEED_RSS %}
+        <a
+            href="{{ FEED_DOMAIN }}/{{ feed_url.format(slug=tag) }}"
+            type="application/atom+xml" rel="alternate"
+            title="{{ SITENAME }} {{ tag }} RSS Feed">
+            <i class="fa-solid fa-rss"></i>
+        </a>
+        {% endif %}
+
+{% if TAG_FEED_ATOM or TAG_FEED_RSS %}
+    </div>
+</div>
+{% endif %}
+
 <div class="masonry-grid">
     {% for article in articles_page.object_list %}
     <article class="masonry-grid__item">

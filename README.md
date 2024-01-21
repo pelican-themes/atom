@@ -6,6 +6,9 @@ A responsive theme inspired by the VSCode and Atom.
 
 ## TODOs
 
+- [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
+- [ ] Add `archives`, `author`, `authors` and `period_archives` templates
+- [ ] Support for translations
 - [x] Update link/text to Atom theme in the bottom
 - [x] Move ASCII art picture out of the config file
 - [x] Option to include image instead of ASCII art
@@ -17,10 +20,7 @@ A responsive theme inspired by the VSCode and Atom.
 - [x] Share options bellow post
 - [x] Option to use fa-icon for logo in the header
 - [x] Add option to use a regular image for the logo in the header
-- [ ] Support FEEDS
-- [ ] Investigate comment support, consider [Isso](https://github.com/posativ/isso)
-- [ ] Add `archives`, `author`, `authors` and `period_archives` templates
-- [ ] Support for translations
+- [x] Support FEEDS
 
 ## Installation
 
@@ -129,3 +129,4 @@ TODO:
 - cv items
 - rows of images
 - code blocks
+- toggle container

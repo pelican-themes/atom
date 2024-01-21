@@ -19,17 +19,29 @@ function build_minimap() {
     });
 }
 
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
     // build minimap
     build_minimap();
 
-    document.querySelector(".toggle .header").click(function() {
-        if (document.querySelector(this).hasClass("open")) {
-            document.querySelector(this).parent().children().not(".header").slideUp();
-        } else {
-            document.querySelector(this).parent().children().not(".header").slideDown();
-        }
-        document.querySelector(this).parent().children(".header").toggleClass("open");
-    })
+    let headers = document.querySelectorAll(".toggle .header");
+    headers.forEach(header => {
+        // Set initial state to closed
+        let siblings = Array.from(header.parentNode.children);
+        siblings.filter(el => el !== header).forEach(el => el.style.display = 'none');
+
+        header.addEventListener('click', function() {
+
+            if (header.classList.contains("open")) {
+
+                siblings.filter(el => !el.classList.contains('header')).forEach(el => el.style.display = 'none');
+            } else {
+
+                siblings.forEach(el => el.style.display = 'block');
+            }
+
+            header.classList.toggle("open");
+        });
+    });
 });

@@ -8,7 +8,6 @@
 {% set article_cover = SITEURL + '/theme/images/not-found.png' %}
 {% endif %}
 
-
 {% block open_graph %}
 <meta property="og:title" content="{{ article.title }}" />
 <meta property="og:type" content="website" />
@@ -27,6 +26,11 @@
 {% endblock %}
 
 {% block content %}
+<header>
+<h1 class="purple">
+    <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a>
+</h1>
+</header>
 <article>
     {{ article.content }}
 </article>

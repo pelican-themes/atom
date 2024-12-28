@@ -661,6 +661,16 @@ $size: calc(220px/60);
         &.purple { color: $purple }
     }
 
+    ul, ol{
+        padding-left:45px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+
+        li{
+            line-height:1.5em;
+        }
+    }
+
     ul.auto-toc{
 
         padding-left:30px;
@@ -714,6 +724,64 @@ $size: calc(220px/60);
     .scrollx{
         overflow-x: scroll;
     }
+
+    .uml{
+        overflow-x: scroll;
+        text-align: center;
+        color: $blue;
+        font-size: 1.6em;
+    }
+
+    admonition,
+    .note,
+    .attention,
+    .caution,
+    .danger,
+    .error,
+    .hint,
+    .important,
+    .tip,
+    .warning
+    {
+        padding: 10px 30px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border-left: 5px $azure solid;
+        background-color: $darkergray;
+        color: $lightgray;
+        font-style: italic;
+
+        .admonition-title{
+            color: $azure;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1.2em;
+        }
+    }
+
+    .attention,
+    .caution,
+    .warning,
+    .important,
+    {
+        border-left: 5px $orange solid;
+        .admonition-title{color: $orange}
+    }
+
+    .danger,
+    .error
+    {
+        border-left: 5px $purple solid;
+        .admonition-title{color: $purple}
+    }
+
+    .hint,
+    .tip
+    {
+        border-left: 5px $green solid;
+        .admonition-title{color: $green}
+    }
+
 
     table {
         margin-top: 15px;
